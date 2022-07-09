@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Fraunces", serif;
+  background-color: hsl(30, 38%, 92%);
+}
+
+.card {
+  max-width: 33rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.perfume-img {
+  background: url(img/image-product-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.info {
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.2rem;
+}
+
+.info h2 {
+  margin: 1rem 0;
+  text-transform: uppercase;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.info h1 {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.pricing {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 1.3rem auto;
+}
+
+.big-text {
+  font-size: 1.8rem;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.small-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.btn {
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(30, 38%, 92%);
+  border: 0;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding: 0.9em;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(160, 72%, 11%);
+}
+
+.btn::before {
+  content: url(img/icon-cart.svg);
+  margin-right: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 34.375rem) {
+  .card {
+    width: 21.875rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0.8rem;
+  }
+
+  .perfume-img {
+    background: url(img/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .info h2 {
+    margin-top: 0;
+    font-size: 0.7rem;
+  }
+
+  .big-text {
+    font-size: 1.6rem;
+  }
+}
